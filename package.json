@@ -1,0 +1,39 @@
+{
+  "name": "koa-webserver-boilerplate",
+  "version": "0.0.1",
+  "description": "Boilerplate for a minimal NodeJS Koa webserver",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-specifier-resolution=node src/index.js",
+    "version": "npm run start -- -v",
+    "help": "npm run start -- --help",
+    "serve": "npm run start -- serve",
+    "serve:8043": "npm run serve -- 8043"
+  },
+  "engines": {
+    "node": ">=16.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RavenHursT/koa-webserver-boilerplate.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "KoaJS",
+    "Boilerplate"
+  ],
+  "author": "Matthew Marcus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RavenHursT/koa-webserver-boilerplate/issues"
+  },
+  "homepage": "https://github.com/RavenHursT/koa-webserver-boilerplate#readme",
+  "dependencies": {
+    "@koa/router": "^10.1.0",
+    "koa": "^2.13.1",
+    "koa-mount": "^4.0.0",
+    "yargs": "^17.1.1"
+  },
+  "type": "module"
+}
