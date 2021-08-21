@@ -3,7 +3,7 @@
 ### CLI
 Run Server
 ```bash
-npm run serve
+npm run serve [port]
 ```
 Get Version
 ```bash
