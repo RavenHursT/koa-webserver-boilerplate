@@ -1,6 +1,6 @@
 import Router from '@koa/router'
 import {getRouter as getUtilsRouter} from '../modules/utils'
-import Boom from '@hapi/boom'
+import createError from 'http-errors'
 
 export const getRouter = () => {
   const router = new Router()
@@ -11,8 +11,8 @@ export const getRouter = () => {
     routes: router.routes(),
     allowedMethods: router.allowedMethods({
       throw: true,
-      notImplemented: Boom.notImplemented(),
-      methodNotAllowed: Boom.methodNotAllowed()
+      notImplemented: new createError.NotImplemented(),
+      methodNotAllowed: new createError.MethodNotAllowed()
     })
   }
 }
