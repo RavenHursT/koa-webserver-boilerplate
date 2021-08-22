@@ -1,5 +1,6 @@
 import Router from '@koa/router'
 import {getRouter as getUtilsRouter} from '../modules/utils'
+import Boom from '@hapi/boom'
 
 export const getRouter = () => {
   const router = new Router()
@@ -8,6 +9,10 @@ export const getRouter = () => {
   return {
     router,
     routes: router.routes(),
-    allowedMethods: router.allowedMethods()
+    allowedMethods: router.allowedMethods({
+      throw: true,
+      notImplemented: Boom.notImplemented(),
+      methodNotAllowed: Boom.methodNotAllowed()
+    })
   }
 }

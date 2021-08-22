@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/RavenHursT/koa-webserver-boilerplate#readme",
   "dependencies": {
+    "@hapi/boom": "^9.1.4",
     "@koa/router": "^10.1.0",
     "koa": "^2.13.1",
     "koa-mount": "^4.0.0",
