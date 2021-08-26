@@ -6,7 +6,7 @@ const serveConfig = {
       describe: 'Port to bind on',
       default: 8080,
       type: 'number'
-    }
+    },
   }
 }
 
